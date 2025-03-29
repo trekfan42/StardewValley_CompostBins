@@ -1,0 +1,8 @@
+C:\Users\davis\source\repos\CompostBins\CompostBins\bin\Debug\net6.0\CompostBins.deps.json
+C:\Users\davis\source\repos\CompostBins\CompostBins\bin\Debug\net6.0\CompostBins.dll
+C:\Users\davis\source\repos\CompostBins\CompostBins\obj\Debug\net6.0\CompostBins.csproj.AssemblyReference.cache
+C:\Users\davis\source\repos\CompostBins\CompostBins\obj\Debug\net6.0\CompostBins.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\davis\source\repos\CompostBins\CompostBins\obj\Debug\net6.0\CompostBins.AssemblyInfoInputs.cache
+C:\Users\davis\source\repos\CompostBins\CompostBins\obj\Debug\net6.0\CompostBins.AssemblyInfo.cs
+C:\Users\davis\source\repos\CompostBins\CompostBins\obj\Debug\net6.0\CompostBins.csproj.CoreCompileInputs.cache
+C:\Users\davis\source\repos\CompostBins\CompostBins\obj\Debug\net6.0\CompostBins.dll

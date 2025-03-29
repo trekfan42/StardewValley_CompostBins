@@ -1,0 +1,14 @@
+{
+  "Name": "[CP] Manure Industries",
+  "Author": "Drewdus42",
+  "Version": "2.2.0",
+  "Description": "This content pack adds my new Manure Compost Bins.",
+  "UniqueID": "Drewdus42.CPManureIndustries",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": [ "Nexus:9310" ],
+  "ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher",
+		"MinimumVersion": "2.0.0-alpha"
+  }
+
+}

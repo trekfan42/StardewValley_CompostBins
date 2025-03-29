@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vWLZdaamx6I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\davis\\source\\repos\\CompostBins\\StardewValley_CompostBins\\CompostBins\\CompostBins.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\davis\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.1.1\\pathoschild.stardew.modbuildconfig.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

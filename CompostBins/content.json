@@ -1,0 +1,137 @@
+{
+	"Format": "2.2.0",
+	"Changes": [
+		{
+			"LogName": "Load textures",
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/retaining_soil_bin, Mods/{{ModId}}/fertilizer_bin, Mods/{{ModId}}/speedgro_bin",
+			"FromFile": "assets/{{TargetWithoutPath}}.png"
+		},
+		{
+			"LogName": "Add Compost bins to big craftables",
+			"Action": "EditData",
+			"Target": "Data/BigCraftables",
+			"Entries": {
+				"{{ModId}}_RetainingSoilBin": {
+					"Name": "Retaining Soil Compost Bin",
+					"DisplayName": "Retaining Soil Compost Bin",
+					"Description": "Produces retaining soil in a Barn or Coop based on the number of animals and the building's upgrade level.",
+					"Price": 1000,
+					"Texture": "Mods/{{ModId}}/retaining_soil_bin",
+					"Fragility": 0,
+					"CanBePlacedIndoors": true,
+					"CanBePlacedOutdoors": false
+				},
+				"{{ModId}}_FertilizerBin": {
+					"Name": "Fertilizer Compost Bin",
+					"DisplayName": "Fertilizer Compost Bin",
+					"Description": "Produces Fertilizer in a Barn or Coop based on the number of animals and the building's upgrade level.",
+					"Price": 1000,
+					"Texture": "Mods/{{ModId}}/fertilizer_bin",
+					"Fragility": 0,
+					"CanBePlacedIndoors": true,
+					"CanBePlacedOutdoors": false
+				},
+				"{{ModId}}_SpeedGroBin": {
+					"Name": "Speed-Gro Compost Bin",
+					"DisplayName": "Speed-Gro Compost Bin",
+					"Description": "Produces Speed-Gro in a Barn or Coop based on the number of animals and the building's upgrade level.",
+					"Price": 1000,
+					"Texture": "Mods/{{ModId}}/speedgro_bin",
+					"Fragility": 0,
+					"CanBePlacedIndoors": true,
+					"CanBePlacedOutdoors": false
+				}
+			}
+		},
+		{
+			"LogName": "Add Compost bin crafting recipes",
+			"Action": "EditData",
+			"Target": "Data/CraftingRecipes",
+			"Entries": {
+				"Retaining Soil Bin": "420 10 168 10 709 10/Home/{{ModId}}_RetainingSoilBin/true/Farming 4", // 420: Red Mushroom, 168: Trash, 709: Hardwood
+				"Fertilizer Bin": "404 10 168 10 709 10/Home/{{ModId}}_FertilizerBin/true/Farming 1", // 404: Common Mushroom, 168: Trash, 709: Hardwood
+				"Speed-Gro Bin": "422 10 168 10 709 10/Home/{{ModId}}_SpeedGroBin/true/Farming 3" // 422: Purple Mushroom, 168: Trash, 709: Hardwood
+			}
+		},
+		{
+			"LogName": "Spawn Resource from Compost Bin",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"Entries": {
+				"(BC){{ModId}}_FertilizerBin": {
+					"OutputRules": [
+
+						{
+							"Id": "Fertilizer",
+							"Triggers": [
+								{
+									"Id": "FertilizerSpawn",
+									"Trigger": "MachinePutDown, DayUpdate, OutputCollected"
+								}
+							],
+							"OutputItem": [
+								{
+									"OutputMethod": "CompostBins.ModEntry, CompostBins: GetResourceOutput"
+								}
+							],
+							"DaysUntilReady": 1
+
+						}
+					],
+					"OnlyCompleteOvernight": true,
+					"WobbleWhileWorking": true
+
+				},
+				"(BC){{ModId}}_RetainingSoilBin": {
+					"OutputRules": [
+
+						{
+							"Id": "RetainingSoil",
+							"Triggers": [
+								{
+									"Id": "RetainingSoilSpawn",
+									"Trigger": "MachinePutDown, DayUpdate, OutputCollected"
+								}
+							],
+							"OutputItem": [
+								{
+									"OutputMethod": "CompostBins.ModEntry, CompostBins: GetResourceOutput"
+								}
+							],
+							"DaysUntilReady": 1
+
+						}
+					],
+					"OnlyCompleteOvernight": true,
+					"WobbleWhileWorking": true
+
+				},
+				"(BC){{ModId}}_SpeedGroBin": {
+					"OutputRules": [
+
+						{
+							"Id": "SpeedGro",
+							"Triggers": [
+								{
+									"Id": "SpeedGroSpawn",
+									"Trigger": "MachinePutDown, DayUpdate, OutputCollected"
+								}
+							],
+							"OutputItem": [
+								{
+									"OutputMethod": "CompostBins.ModEntry, CompostBins: GetResourceOutput"
+								}
+							],
+							"DaysUntilReady": 1
+
+						}
+					],
+					"OnlyCompleteOvernight": true,
+					"WobbleWhileWorking": true
+
+				}
+			}
+		}
+	]
+}
